@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="EC Skincare">
     <meta name="description" content="EC Skincare sell skincare products for all skintypes from the top manufacturers in the world. We offer free shipping and fast world wide deliveries.">
     <meta name="keywords" content="EC Skincare, skincare, lotion, beauty, silky soft, shampoo">
+    <meta name="viewport" content="width-device-width, initial-scale=1,0">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,7 @@
             <a href="index.html"><img src="images/logo.png" alt="logo" title="logo"></a>
         </figure>
 
-        <input id="input_search" type="text" class="fa" placeholder="&#xf002 Search and press enter...">
+        <input id="input_search" type="text" class="fa" placeholder="&#xf002; Search and press enter...">
 
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -45,40 +45,60 @@
 
         <section id="checkoutpage">
 
-            <form id="payment" action="index.html" method="get" >
+            <form id="payment" action="index.html" method="get">
+
+
                 <label for="firstname">First name</label>
-                <input type="text" id="firstname" name="first name" >
+                <input type="text" id="firstname" name="first name" title="Required format is A-Z, no numbers and more than three letters."
+                       required pattern="[A-Za-z\s]{3,}">
+
                 <label for="lastname">Last name</label>
-                <input type="text" id="lastname"  name="last name">
+                <input type="text" id="lastname"  name="last name" title="Required format is A-Z, no numbers and more than three letters."
+                       required pattern="[A-Za-z\s]{3,}">
+
                 <label for="streetaddress">Street address</label>
-                <input type="text" id="streetaddress"  >
+                <input type="text" id="streetaddress" title="Street adress" required>
+
                 <label for="city">City</label>
-                <select id="city">
-                    <option value="City">...City...</option>
-                    <option value="Hbg">Helsingborg</option>
+                <select required id="city">
+                    <option value="" disabled selected>Choose city</option>
+                    <option value="">Helsingborg</option>
                     <option value="Hgn">Höganäs</option>
                     <option value="Lerberget">Lerberget</option>
                 </select>
+
                 <Label>ZIP Code</Label>
-                <input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
+                <input type="text" required pattern="[0-9]{5}" title="Five digit zip code" />
+
+
                 <label for="country">Country</label>
-                <select id="country">
-                    <option value="country">...Country...</option>
+                <select required id="country">
+                    <option value="" disabled selected>Choose country</option>
                     <option value="Sweden">Sweden</option>
                     <option value="usa">USA</option>
                     <option value="Denmark">Denmark</option>
                 </select>
+
                 <label for="email">Email</label>
-                <input type="email" id="email" >
+                <input type="email" id="email" title="You have to include '@' in your email-adress." name="email" required>
+
                 <label for="shipping">Shipping</label>
-                <select id="shipping">
-                    <option value="shipping">...Shipping method...</option>
+                <select required id="shipping">
+                    <option value="" disabled selected>Choose shipping method</option>
                     <option value="standard">Standard</option>
                     <option value="express">Express</option>
                     <option value="home">Home delivered</option>
                 </select>
+
                 <input type="submit"  id="submit"   name="submit" value="Submit">
+
+
             </form>
+
+
+
+
+
         </section>
     </main>
 

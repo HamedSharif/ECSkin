@@ -450,11 +450,25 @@ main {
     flex: 1;
     width: 100%;
     height: 24px;
-    font-size: 14px;
     color: #555;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
+    background-color: #ECECED;
+    cursor: pointer;
+}
+
+#contactpage input:focus{
+    outline: solid 1px #E07090;
+}
+
+#contactpage input:last-of-type{
+    background-color: #E07090;
+    color: white;
+}
+
+#contactpage input:last-of-type:hover{
+    background-color: #D45C9F;
 }
 
 #contactpage textarea {
@@ -467,12 +481,46 @@ main {
     border-radius: 4px;
     margin-bottom: 20px;
     resize: none;
+    background-color: #ECECED;
 }
 
+#contactpage textarea:focus{
+    outline: solid 1px #E07090;
+}
 #contactpage p {
     margin: 0 0 40px 0;
 }
 
+
+#login {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+#login label {
+    flex: 1;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#login input {
+    flex: 1;
+    width: 100%;
+    height: 24px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#login h2 {
+    margin: 25px 0;
+}
 
 
 
@@ -633,7 +681,7 @@ footer #copyright p {
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 
     /* Top Header Wrapper */
     body > #container > header {
