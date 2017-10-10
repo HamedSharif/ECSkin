@@ -1,0 +1,721 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* General Styles */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f8f8fa url("images/bg.png") left top repeat;
+}
+
+#container {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #555555;
+    flex-direction: column;
+}
+
+
+/* Top Header */
+body > #container > header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 96%;
+    padding: 0.5% 2%;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #e07090;
+}
+
+/* Left Side UL */
+#container > header > ul:first-child {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Right Side UL */
+#container > header > ul:last-child {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Link Styles */
+#container > header > ul:first-child li a,
+#container > header > ul:last-child li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#container > header > ul:first-child li a:hover,
+#container > header > ul:last-child li a:hover {
+    text-decoration: underline;
+}
+
+/* Font Awesome Icons */
+#container > header > ul:first-child li:first-child:before,
+#container > header > ul:first-child li:last-child:before,
+#container > header > ul:last-child li:first-child:before,
+#container > header > ul:last-child li:last-child:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+/* Account Icon */
+#container > header > ul:first-child li:first-child:before {
+    content: "\f007";
+}
+
+/* Wishlist Icon */
+#container > header > ul:first-child li:last-child:before {
+    content: "\f004";
+    margin-left: 20px;
+}
+
+/* Cart Icon */
+#container > header > ul:last-child li:first-child:before {
+    content: "\f07a";
+}
+
+/* Checkout Icon */
+#container > header > ul:last-child li:last-child:before {
+    content: "\f061";
+    margin-left: 20px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    width: 96%;
+    padding: 0;
+    font-size: 12px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+/* Logo */
+nav figure {
+    flex: 1 100%;
+    text-align: center;
+    margin: 0;
+}
+
+/* Search */
+nav input {
+    flex: 1 100%;
+    height: 24px;
+    margin: 0 0 20px 0;
+}
+
+/* Links */
+nav ul {
+    flex: 1 100%;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav ul li a {
+    display: block;
+    color: #444;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li a:hover {
+    background-color: #e07090;
+    color: #ffffff;
+}
+
+nav ul li a.active {
+    background-color: #e07090;
+    color: #ffffff;
+}
+
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    max-width: 96%;
+    padding: 0.5% 2%;
+    font-size: 12px;
+    background-color: #ffffff;
+}
+
+/* Banner Image */
+#banner figure {
+    margin: 20px 0 40px 0;
+}
+
+#banner figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products {
+    flex: 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.products ul li {
+    flex: 1 50%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+
+.products ul li figure {
+    width: 100%;
+    border:1px solid white;
+    transition: 200ms ease;
+    margin: 0 auto;
+}
+
+.products ul li figure:hover {
+    border:1px solid #ddd;
+}
+
+.products ul li figure img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.products ul li figure h3,
+.products ul li figure h4{
+    text-align: center;
+}
+
+.products ul li figure h4 {
+    margin: 5px 0;
+    color: #D45C9F;
+}
+
+/* Item Name Link */
+.products > ul > li > figure > figcaption > h3 > a {
+    width: 100%;
+    text-decoration: none;
+    color: #444444;
+    margin: 0 auto;
+}
+
+.products > ul > li > figure > figcaption > h3 > a:hover {
+    text-decoration: underline;
+}
+
+
+/* Add to Cart */
+.products > ul > li > figure > figcaption > h5 > a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    width: 78px;
+    padding: 5px;
+    background-color: #e07090;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition: 200ms ease;
+}
+
+.products > ul > li > figure > figcaption > h5 > a:hover {
+    background-color: #444;
+}
+
+.products header {
+    flex: 1 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    margin-bottom: 25px;
+}
+
+#productpage {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px 0;
+    margin: 30px 0;
+}
+
+#productpage h1 {
+    flex: 1;
+}
+
+/* Sort by selector */
+#productpage .product-sort {
+    flex: 1;
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+#blogpage {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 0;
+    margin: 30px 0;
+}
+
+#blogpage article {
+    flex: 1;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+
+
+/* Blog Images */
+#blogpage figure {
+    margin: 20px 0;
+}
+
+#blogpage figure img {
+    max-width: 100%;
+    height: auto;
+    transition: 200ms ease;
+}
+
+#blogpage figure img:hover {
+    opacity: 0.6;
+}
+
+#blogpage a {
+    text-decoration: none;
+    color: #444444;
+}
+
+#blogpage a:hover {
+    text-decoration: underline;
+}
+
+#blogpage h4 {
+     margin: 10px 0;
+     font-weight: 900;
+     font-size: 14px;
+     color: #e07090;
+ }
+
+#blogpage h5 {
+    text-align: center;
+    font-weight: 400;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+#blogpage a h5 {
+    background-color: #E07090;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    transition: 200ms ease;
+}
+
+#blogpage a h5:hover {
+    text-decoration: none;
+    background-color: #222222;
+}
+
+#blogpage h2 {
+    font-size: 20px;
+}
+
+/* Date */
+#blogpage h3 {
+    font-weight: 100;
+}
+
+#blogpage p {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+#blogpage p:first-letter {
+    font-size: 150%;
+    font-weight: bold;
+    color: #e07090;
+}
+
+
+#checkoutpage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#checkoutpage label {
+    flex: 1;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#checkoutpage input {
+    flex: 1;
+    width: 100%;
+    height: 24px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#checkoutpage select {
+    flex: 1;
+    width: 100%;
+    height: 24px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+#contactpage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contactpage label {
+    flex: 1;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#contactpage input {
+    flex: 1;
+    width: 100%;
+    height: 24px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#contactpage textarea {
+    flex: 1;
+    width: 100%;
+    height: 100px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+#contactpage p {
+    margin: 0 0 40px 0;
+}
+
+
+
+
+/* Main page introduction text */
+#introduction {
+    flex: 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#introduction header {
+    flex: 1 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+#introduction p {
+    margin: 15px 0 25px 0;
+    font-size: 14px;
+}
+
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    width: 96%;
+    padding: 0.5% 2%;
+    margin-top: auto;
+    background-color: #222222;
+    font-size: 14px;
+    color: #ffffff;
+    border-top: 5px solid #E07090;
+}
+
+footer #links {
+    flex: 1;
+    order: 0;
+}
+
+#links ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#links ul li {
+    display: inline-block;
+}
+
+#links ul li:after {
+    content: '|';
+    color: #E07090;
+}
+
+#links ul li:last-child:after {
+    content: '';
+}
+
+#links ul li a {
+    padding: 3px;
+    color: #ffffff;
+    text-decoration: none;
+    transition:  200ms ease;
+}
+
+#links ul li a:hover {
+    color: #E07090;
+}
+
+footer #social {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    order: 1;
+}
+
+footer #social img {
+    width: 24px;
+    transition: 200ms ease;
+}
+
+footer #social img:hover {
+    transform: scale(1.1);
+}
+
+footer #copyright {
+    flex: 1;
+    text-align: center;
+    padding: 0;
+    order: 2;
+}
+
+footer #copyright p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 480px) {
+
+    /* Top Header Wrapper */
+    body > #container > header {
+        font-size: 14px;
+        background-color: #e07090;
+    }
+    /* Search */
+    nav input {
+        max-width: 344px;
+        margin: 0 auto;
+    }
+    /* Navitaion */
+    nav ul {
+        display: flex
+    }
+    nav ul li {
+        padding: 10px 17px;
+    }
+    nav ul li a {
+        text-align: left;
+        padding: 0;
+    }
+    nav ul li a:hover {
+        background-color: #ffffff;
+        color: #444444;
+        border-bottom: 1px solid #e07090;;
+    }
+    nav ul li a.active {
+        background-color: #ffffff;
+        color: #444444;
+        border-bottom: 1px solid #e07090;;
+    }
+
+    .products ul li {
+        flex: 1 33%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    /* Top Header Wrapper */
+    body > #container > header {
+        background-color: #e07090;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+    }
+
+    nav figure {
+        flex: 1 20%;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    /* Search */
+    nav input {
+        flex: 1 30%;
+        max-width: 100%;
+        font-size: 16px!important;
+        margin: 8px 10px;
+    }
+
+    /* Navitaion */
+    nav ul {
+        flex: 1 30%;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+        margin-left: auto;
+    }
+
+    nav ul li {
+        padding: 10px 17px;
+    }
+
+    nav ul li:last-child {
+        padding-right: 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction:row;
+    }
+
+    footer #information {
+        flex: 1;
+        order: 0;
+    }
+
+    #links ul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 15px 0;
+        text-align: left;
+    }
+
+    footer #social {
+        text-align: right;
+        order: 2;
+    }
+
+    footer #copyright {
+        order: 1;
+        margin: 13px;
+    }
+
+    footer #copyright p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .products ul li {
+        flex: 1 15%;
+        max-width: 158px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+}
